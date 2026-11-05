@@ -34,6 +34,8 @@ pytest tests/pharma/test_engine.py
 
 `PLATFORM_IMAGE` 应固定为不可变摘要。`core.modules.pharma.views` 是平台适配层；`catalog.py`、`demo.py` 和 `engine.py` 是不依赖平台存储的领域内核。
 
+完整的 Compose、受限网关、初始化、升级及回退规范见 [`deployment/README.md`](deployment/README.md)。
+
 ## 数据与合规边界
 
 - 仓库内数据均为生成的演示数据，不包含真实企业、患者或个人数据。
