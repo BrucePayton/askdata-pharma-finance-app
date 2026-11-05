@@ -1,0 +1,366 @@
+{
+  "schema_version": "domain_application/v1",
+  "application_id": "pharma-finance",
+  "version": "1.0.0",
+  "platform_contract": "v1",
+  "domain_code": "industry.pharma_finance",
+  "name": "医药财务分析中心",
+  "bindings": [
+    {
+      "key": "pharma_database",
+      "kind": "database"
+    },
+    {
+      "key": "pharma_policy",
+      "kind": "knowledge_base"
+    },
+    {
+      "key": "pharma_methods",
+      "kind": "knowledge_base"
+    },
+    {
+      "key": "pharma_demo_policy",
+      "kind": "knowledge_base"
+    }
+  ],
+  "resources": [
+    {
+      "key": "pharma-overview",
+      "kind": "skill",
+      "name": "经营驾驶舱",
+      "description": "集团收入、毛利与内部交易抵销后有什么变化？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-overview"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-budget",
+      "kind": "skill",
+      "name": "预算差异分析",
+      "description": "收入和经营利润的预算差异来自哪里？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-budget"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-product",
+      "kind": "skill",
+      "name": "产品盈利分析",
+      "description": "哪些药品、渠道的盈利下降，量价结构如何变化？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-product"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-tender",
+      "kind": "skill",
+      "name": "集采履约分析",
+      "description": "中选合同约定量执行是否达标，价格是否一致？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-tender"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-receivables",
+      "kind": "skill",
+      "name": "医院及渠道应收",
+      "description": "哪些医院和渠道逾期，应优先复核哪些款项？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-receivables"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-cash",
+      "kind": "skill",
+      "name": "资金预测",
+      "description": "未来13周在基准与延迟回款情景下是否存在资金缺口？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-cash"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-inventory",
+      "kind": "skill",
+      "name": "效期库存风险",
+      "description": "哪些批次临期、滞销，资金占用有多大？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-inventory"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-cost",
+      "kind": "skill",
+      "name": "生产采购成本",
+      "description": "采购和生产单位成本偏差来自价格还是数量？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-cost"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-rd",
+      "kind": "skill",
+      "name": "研发项目投入",
+      "description": "哪些研发项目超预算，资本化判断还缺哪些证据？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-rd"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-expense",
+      "kind": "skill",
+      "name": "销售费用与返利",
+      "description": "费用率与返利计提是否与合同测算一致？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-expense"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-quality",
+      "kind": "skill",
+      "name": "财务勾稽检查",
+      "description": "收入、应收与现金勾稽是否存在差异？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-quality"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    },
+    {
+      "key": "pharma-monthly",
+      "kind": "skill",
+      "name": "月度经营报告",
+      "description": "本月经营、资金和行业风险应如何复核？",
+      "execution": {
+        "mode": "instructions",
+        "skill_name": "pharma-monthly"
+      },
+      "capabilities": [
+        "skill.load"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "pharma-overview",
+      "name": "经营驾驶舱",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-budget",
+      "name": "预算差异分析",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-product",
+      "name": "产品盈利分析",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-tender",
+      "name": "集采履约分析",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-receivables",
+      "name": "医院及渠道应收",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-cash",
+      "name": "资金预测",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-inventory",
+      "name": "效期库存风险",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-cost",
+      "name": "生产采购成本",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-rd",
+      "name": "研发项目投入",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-expense",
+      "name": "销售费用与返利",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-quality",
+      "name": "财务勾稽检查",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    },
+    {
+      "id": "pharma-monthly",
+      "name": "月度经营报告",
+      "inputs": [
+        "period",
+        "entity",
+        "context_revision"
+      ],
+      "outputs": [
+        "metrics",
+        "table",
+        "evidence",
+        "warnings"
+      ]
+    }
+  ]
+}

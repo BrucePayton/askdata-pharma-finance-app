@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "currency": "CNY",
+  "money_unit": "元",
+  "revenue_basis": "不含税；销售表负数量为退货；内部销售抵销收入及对应成本",
+  "receivables_basis": "含税月末快照；到期日当天未逾期；禁止跨月累计快照",
+  "inventory_basis": "月末批次快照；临期阈值90天；风险金额不等于减值金额",
+  "consolidation_scope": "仅同时包含制药和配送交易双方时抵销；其他范围仅汇总",
+  "budget_version": "approved-v1",
+  "consolidation": "模拟内部交易已全部外售，无期末内部未实现利润；否则不支持此合并口径",
+  "forecast": "管理层模拟收付计划；延迟情景仅将前4周收款后移4周；不作确定承诺",
+  "rd": "资本化仅展示已登记数额和证据完整性，不自动作会计认定"
+}

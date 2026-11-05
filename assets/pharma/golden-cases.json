@@ -1,0 +1,602 @@
+[
+  {
+    "id": "pharma-overview:2024-10:all",
+    "question": "2024-10，主体all：集团收入、毛利与内部交易抵销后有什么变化？",
+    "app_id": "pharma-overview",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "revenue",
+    "expected": "1326800.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)-CASE WHEN :entity='all' THEN CAST(internal_revenue AS REAL) ELSE 0 END) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-overview:2025-09:MFG",
+    "question": "2025-09，主体MFG：集团收入、毛利与内部交易抵销后有什么变化？",
+    "app_id": "pharma-overview",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "revenue",
+    "expected": "619960.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)-CASE WHEN :entity='all' THEN CAST(internal_revenue AS REAL) ELSE 0 END) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-overview:2025-10:DIST",
+    "question": "2025-10，主体DIST：集团收入、毛利与内部交易抵销后有什么变化？",
+    "app_id": "pharma-overview",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "revenue",
+    "expected": "1294964.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)-CASE WHEN :entity='all' THEN CAST(internal_revenue AS REAL) ELSE 0 END) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-overview:2026-09:RD",
+    "question": "2026-09，主体RD：集团收入、毛利与内部交易抵销后有什么变化？",
+    "app_id": "pharma-overview",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "revenue",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)-CASE WHEN :entity='all' THEN CAST(internal_revenue AS REAL) ELSE 0 END) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-overview:2026-09:all",
+    "question": "2026-09，主体all：集团收入、毛利与内部交易抵销后有什么变化？",
+    "app_id": "pharma-overview",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "revenue",
+    "expected": "2264495.28",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)-CASE WHEN :entity='all' THEN CAST(internal_revenue AS REAL) ELSE 0 END) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-budget:2024-10:all",
+    "question": "2024-10，主体all：收入和经营利润的预算差异来自哪里？",
+    "app_id": "pharma-budget",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "profit_variance",
+    "expected": "-99065.00",
+    "oracle_sql": "SELECT SUM(revenue-cost-expense-budget_revenue+budget_cost+budget_expense) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-budget:2025-09:MFG",
+    "question": "2025-09，主体MFG：收入和经营利润的预算差异来自哪里？",
+    "app_id": "pharma-budget",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "profit_variance",
+    "expected": "-41420.24",
+    "oracle_sql": "SELECT SUM(revenue-cost-expense-budget_revenue+budget_cost+budget_expense) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-budget:2025-10:DIST",
+    "question": "2025-10，主体DIST：收入和经营利润的预算差异来自哪里？",
+    "app_id": "pharma-budget",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "profit_variance",
+    "expected": "-87085.03",
+    "oracle_sql": "SELECT SUM(revenue-cost-expense-budget_revenue+budget_cost+budget_expense) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-budget:2026-09:RD",
+    "question": "2026-09，主体RD：收入和经营利润的预算差异来自哪里？",
+    "app_id": "pharma-budget",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "profit_variance",
+    "expected": "-4575.00",
+    "oracle_sql": "SELECT SUM(revenue-cost-expense-budget_revenue+budget_cost+budget_expense) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-budget:2026-09:all",
+    "question": "2026-09，主体all：收入和经营利润的预算差异来自哪里？",
+    "app_id": "pharma-budget",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "profit_variance",
+    "expected": "-170720.78",
+    "oracle_sql": "SELECT SUM(revenue-cost-expense-budget_revenue+budget_cost+budget_expense) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-product:2024-10:all",
+    "question": "2024-10，主体all：哪些药品、渠道的盈利下降，量价结构如何变化？",
+    "app_id": "pharma-product",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "revenue",
+    "expected": "1326800.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)) FROM sales WHERE period=:period AND (:entity='all' OR entity_id=:entity) AND (:entity!='all' OR internal='0')"
+  },
+  {
+    "id": "pharma-product:2025-09:MFG",
+    "question": "2025-09，主体MFG：哪些药品、渠道的盈利下降，量价结构如何变化？",
+    "app_id": "pharma-product",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "revenue",
+    "expected": "619960.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)) FROM sales WHERE period=:period AND (:entity='all' OR entity_id=:entity) AND (:entity!='all' OR internal='0')"
+  },
+  {
+    "id": "pharma-product:2025-10:DIST",
+    "question": "2025-10，主体DIST：哪些药品、渠道的盈利下降，量价结构如何变化？",
+    "app_id": "pharma-product",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "revenue",
+    "expected": "1294964.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)) FROM sales WHERE period=:period AND (:entity='all' OR entity_id=:entity) AND (:entity!='all' OR internal='0')"
+  },
+  {
+    "id": "pharma-product:2026-09:RD",
+    "question": "2026-09，主体RD：哪些药品、渠道的盈利下降，量价结构如何变化？",
+    "app_id": "pharma-product",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "revenue",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)) FROM sales WHERE period=:period AND (:entity='all' OR entity_id=:entity) AND (:entity!='all' OR internal='0')"
+  },
+  {
+    "id": "pharma-product:2026-09:all",
+    "question": "2026-09，主体all：哪些药品、渠道的盈利下降，量价结构如何变化？",
+    "app_id": "pharma-product",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "revenue",
+    "expected": "2264495.28",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)) FROM sales WHERE period=:period AND (:entity='all' OR entity_id=:entity) AND (:entity!='all' OR internal='0')"
+  },
+  {
+    "id": "pharma-tender:2024-10:all",
+    "question": "2024-10，主体all：中选合同约定量执行是否达标，价格是否一致？",
+    "app_id": "pharma-tender",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "fulfilment",
+    "expected": "94.10",
+    "oracle_sql": "SELECT 100.0*SUM(delivered_quantity)/NULLIF(SUM(agreed_quantity),0) FROM tenders WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-tender:2025-09:MFG",
+    "question": "2025-09，主体MFG：中选合同约定量执行是否达标，价格是否一致？",
+    "app_id": "pharma-tender",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "fulfilment",
+    "expected": "93.54",
+    "oracle_sql": "SELECT 100.0*SUM(delivered_quantity)/NULLIF(SUM(agreed_quantity),0) FROM tenders WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-tender:2025-10:DIST",
+    "question": "2025-10，主体DIST：中选合同约定量执行是否达标，价格是否一致？",
+    "app_id": "pharma-tender",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "fulfilment",
+    "expected": "97.65",
+    "oracle_sql": "SELECT 100.0*SUM(delivered_quantity)/NULLIF(SUM(agreed_quantity),0) FROM tenders WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-tender:2026-09:RD",
+    "question": "2026-09，主体RD：中选合同约定量执行是否达标，价格是否一致？",
+    "app_id": "pharma-tender",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "fulfilment",
+    "expected": null,
+    "oracle_sql": "SELECT 100.0*SUM(delivered_quantity)/NULLIF(SUM(agreed_quantity),0) FROM tenders WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-tender:2026-09:all",
+    "question": "2026-09，主体all：中选合同约定量执行是否达标，价格是否一致？",
+    "app_id": "pharma-tender",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "fulfilment",
+    "expected": "97.51",
+    "oracle_sql": "SELECT 100.0*SUM(delivered_quantity)/NULLIF(SUM(agreed_quantity),0) FROM tenders WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-receivables:2024-10:all",
+    "question": "2024-10，主体all：哪些医院和渠道逾期，应优先复核哪些款项？",
+    "app_id": "pharma-receivables",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "outstanding",
+    "expected": "599713.60",
+    "oracle_sql": "SELECT SUM(CAST(outstanding AS REAL)) FROM receivables WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-receivables:2025-09:MFG",
+    "question": "2025-09，主体MFG：哪些医院和渠道逾期，应优先复核哪些款项？",
+    "app_id": "pharma-receivables",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "outstanding",
+    "expected": "233476.08",
+    "oracle_sql": "SELECT SUM(CAST(outstanding AS REAL)) FROM receivables WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-receivables:2025-10:DIST",
+    "question": "2025-10，主体DIST：哪些医院和渠道逾期，应优先复核哪些款项？",
+    "app_id": "pharma-receivables",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "outstanding",
+    "expected": "585323.73",
+    "oracle_sql": "SELECT SUM(CAST(outstanding AS REAL)) FROM receivables WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-receivables:2026-09:RD",
+    "question": "2026-09，主体RD：哪些医院和渠道逾期，应优先复核哪些款项？",
+    "app_id": "pharma-receivables",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "outstanding",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(CAST(outstanding AS REAL)) FROM receivables WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-receivables:2026-09:all",
+    "question": "2026-09，主体all：哪些医院和渠道逾期，应优先复核哪些款项？",
+    "app_id": "pharma-receivables",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "outstanding",
+    "expected": "1023551.86",
+    "oracle_sql": "SELECT SUM(CAST(outstanding AS REAL)) FROM receivables WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-cash:2024-10:all",
+    "question": "2024-10，主体all：未来13周在基准与延迟回款情景下是否存在资金缺口？",
+    "app_id": "pharma-cash",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "opening",
+    "expected": "6187040.00",
+    "oracle_sql": "SELECT SUM(CAST(closing_cash AS REAL)) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-cash:2025-09:MFG",
+    "question": "2025-09，主体MFG：未来13周在基准与延迟回款情景下是否存在资金缺口？",
+    "app_id": "pharma-cash",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "opening",
+    "expected": "2948127.36",
+    "oracle_sql": "SELECT SUM(CAST(closing_cash AS REAL)) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-cash:2025-10:DIST",
+    "question": "2025-10，主体DIST：未来13周在基准与延迟回款情景下是否存在资金缺口？",
+    "app_id": "pharma-cash",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "opening",
+    "expected": "4740749.44",
+    "oracle_sql": "SELECT SUM(CAST(closing_cash AS REAL)) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-cash:2026-09:RD",
+    "question": "2026-09，主体RD：未来13周在基准与延迟回款情景下是否存在资金缺口？",
+    "app_id": "pharma-cash",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "opening",
+    "expected": "-626400.00",
+    "oracle_sql": "SELECT SUM(CAST(closing_cash AS REAL)) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-cash:2026-09:all",
+    "question": "2026-09，主体all：未来13周在基准与延迟回款情景下是否存在资金缺口？",
+    "app_id": "pharma-cash",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "opening",
+    "expected": "12158166.15",
+    "oracle_sql": "SELECT SUM(CAST(closing_cash AS REAL)) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-inventory:2024-10:all",
+    "question": "2024-10，主体all：哪些批次临期、滞销，资金占用有多大？",
+    "app_id": "pharma-inventory",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "inventory",
+    "expected": "392421.00",
+    "oracle_sql": "SELECT SUM(CAST(value AS REAL)) FROM inventory WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-inventory:2025-09:MFG",
+    "question": "2025-09，主体MFG：哪些批次临期、滞销，资金占用有多大？",
+    "app_id": "pharma-inventory",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "inventory",
+    "expected": "173503.00",
+    "oracle_sql": "SELECT SUM(CAST(value AS REAL)) FROM inventory WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-inventory:2025-10:DIST",
+    "question": "2025-10，主体DIST：哪些批次临期、滞销，资金占用有多大？",
+    "app_id": "pharma-inventory",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "inventory",
+    "expected": "389334.00",
+    "oracle_sql": "SELECT SUM(CAST(value AS REAL)) FROM inventory WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-inventory:2026-09:RD",
+    "question": "2026-09，主体RD：哪些批次临期、滞销，资金占用有多大？",
+    "app_id": "pharma-inventory",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "inventory",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(CAST(value AS REAL)) FROM inventory WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-inventory:2026-09:all",
+    "question": "2026-09，主体all：哪些批次临期、滞销，资金占用有多大？",
+    "app_id": "pharma-inventory",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "inventory",
+    "expected": "812612.64",
+    "oracle_sql": "SELECT SUM(CAST(value AS REAL)) FROM inventory WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-cost:2024-10:all",
+    "question": "2024-10，主体all：采购和生产单位成本偏差来自价格还是数量？",
+    "app_id": "pharma-cost",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "cost_variance",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(quantity*(actual_unit_cost-standard_unit_cost)) FROM costs WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-cost:2025-09:MFG",
+    "question": "2025-09，主体MFG：采购和生产单位成本偏差来自价格还是数量？",
+    "app_id": "pharma-cost",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "cost_variance",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(quantity*(actual_unit_cost-standard_unit_cost)) FROM costs WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-cost:2025-10:DIST",
+    "question": "2025-10，主体DIST：采购和生产单位成本偏差来自价格还是数量？",
+    "app_id": "pharma-cost",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "cost_variance",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(quantity*(actual_unit_cost-standard_unit_cost)) FROM costs WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-cost:2026-09:RD",
+    "question": "2026-09，主体RD：采购和生产单位成本偏差来自价格还是数量？",
+    "app_id": "pharma-cost",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "cost_variance",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(quantity*(actual_unit_cost-standard_unit_cost)) FROM costs WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-cost:2026-09:all",
+    "question": "2026-09，主体all：采购和生产单位成本偏差来自价格还是数量？",
+    "app_id": "pharma-cost",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "cost_variance",
+    "expected": "174144.96",
+    "oracle_sql": "SELECT SUM(quantity*(actual_unit_cost-standard_unit_cost)) FROM costs WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-rd:2024-10:all",
+    "question": "2024-10，主体all：哪些研发项目超预算，资本化判断还缺哪些证据？",
+    "app_id": "pharma-rd",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "spend",
+    "expected": "80000.00",
+    "oracle_sql": "SELECT SUM(CAST(spend AS REAL)) FROM rd WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-rd:2025-09:MFG",
+    "question": "2025-09，主体MFG：哪些研发项目超预算，资本化判断还缺哪些证据？",
+    "app_id": "pharma-rd",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "spend",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(CAST(spend AS REAL)) FROM rd WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-rd:2025-10:DIST",
+    "question": "2025-10，主体DIST：哪些研发项目超预算，资本化判断还缺哪些证据？",
+    "app_id": "pharma-rd",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "spend",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(CAST(spend AS REAL)) FROM rd WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-rd:2026-09:RD",
+    "question": "2026-09，主体RD：哪些研发项目超预算，资本化判断还缺哪些证据？",
+    "app_id": "pharma-rd",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "spend",
+    "expected": "91500.00",
+    "oracle_sql": "SELECT SUM(CAST(spend AS REAL)) FROM rd WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-rd:2026-09:all",
+    "question": "2026-09，主体all：哪些研发项目超预算，资本化判断还缺哪些证据？",
+    "app_id": "pharma-rd",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "spend",
+    "expected": "91500.00",
+    "oracle_sql": "SELECT SUM(CAST(spend AS REAL)) FROM rd WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-expense:2024-10:all",
+    "question": "2024-10，主体all：费用率与返利计提是否与合同测算一致？",
+    "app_id": "pharma-expense",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "expense",
+    "expected": "252200.00",
+    "oracle_sql": "SELECT SUM(CAST(amount AS REAL)) FROM expenses WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-expense:2025-09:MFG",
+    "question": "2025-09，主体MFG：费用率与返利计提是否与合同测算一致？",
+    "app_id": "pharma-expense",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "expense",
+    "expected": "69596.80",
+    "oracle_sql": "SELECT SUM(CAST(amount AS REAL)) FROM expenses WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-expense:2025-10:DIST",
+    "question": "2025-10，主体DIST：费用率与返利计提是否与合同测算一致？",
+    "app_id": "pharma-expense",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "expense",
+    "expected": "123597.12",
+    "oracle_sql": "SELECT SUM(CAST(amount AS REAL)) FROM expenses WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-expense:2026-09:RD",
+    "question": "2026-09，主体RD：费用率与返利计提是否与合同测算一致？",
+    "app_id": "pharma-expense",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "expense",
+    "expected": "91500.00",
+    "oracle_sql": "SELECT SUM(CAST(amount AS REAL)) FROM expenses WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-expense:2026-09:all",
+    "question": "2026-09，主体all：费用率与返利计提是否与合同测算一致？",
+    "app_id": "pharma-expense",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "expense",
+    "expected": "344336.16",
+    "oracle_sql": "SELECT SUM(CAST(amount AS REAL)) FROM expenses WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-quality:2024-10:all",
+    "question": "2024-10，主体all：收入、应收与现金勾稽是否存在差异？",
+    "app_id": "pharma-quality",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "exceptions",
+    "expected": "0.00",
+    "oracle_sql": "SELECT COUNT(*) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity) AND ABS(closing_cash-opening_cash-operating_cash-investing_cash-financing_cash)>0.01"
+  },
+  {
+    "id": "pharma-quality:2025-09:MFG",
+    "question": "2025-09，主体MFG：收入、应收与现金勾稽是否存在差异？",
+    "app_id": "pharma-quality",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "exceptions",
+    "expected": "0.00",
+    "oracle_sql": "SELECT COUNT(*) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity) AND ABS(closing_cash-opening_cash-operating_cash-investing_cash-financing_cash)>0.01"
+  },
+  {
+    "id": "pharma-quality:2025-10:DIST",
+    "question": "2025-10，主体DIST：收入、应收与现金勾稽是否存在差异？",
+    "app_id": "pharma-quality",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "exceptions",
+    "expected": "0.00",
+    "oracle_sql": "SELECT COUNT(*) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity) AND ABS(closing_cash-opening_cash-operating_cash-investing_cash-financing_cash)>0.01"
+  },
+  {
+    "id": "pharma-quality:2026-09:RD",
+    "question": "2026-09，主体RD：收入、应收与现金勾稽是否存在差异？",
+    "app_id": "pharma-quality",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "exceptions",
+    "expected": "0.00",
+    "oracle_sql": "SELECT COUNT(*) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity) AND ABS(closing_cash-opening_cash-operating_cash-investing_cash-financing_cash)>0.01"
+  },
+  {
+    "id": "pharma-quality:2026-09:all",
+    "question": "2026-09，主体all：收入、应收与现金勾稽是否存在差异？",
+    "app_id": "pharma-quality",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "exceptions",
+    "expected": "0.00",
+    "oracle_sql": "SELECT COUNT(*) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity) AND ABS(closing_cash-opening_cash-operating_cash-investing_cash-financing_cash)>0.01"
+  },
+  {
+    "id": "pharma-monthly:2024-10:all",
+    "question": "2024-10，主体all：本月经营、资金和行业风险应如何复核？",
+    "app_id": "pharma-monthly",
+    "period": "2024-10",
+    "entity": "all",
+    "metric": "revenue",
+    "expected": "1326800.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)-CASE WHEN :entity='all' THEN CAST(internal_revenue AS REAL) ELSE 0 END) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-monthly:2025-09:MFG",
+    "question": "2025-09，主体MFG：本月经营、资金和行业风险应如何复核？",
+    "app_id": "pharma-monthly",
+    "period": "2025-09",
+    "entity": "MFG",
+    "metric": "revenue",
+    "expected": "619960.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)-CASE WHEN :entity='all' THEN CAST(internal_revenue AS REAL) ELSE 0 END) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-monthly:2025-10:DIST",
+    "question": "2025-10，主体DIST：本月经营、资金和行业风险应如何复核？",
+    "app_id": "pharma-monthly",
+    "period": "2025-10",
+    "entity": "DIST",
+    "metric": "revenue",
+    "expected": "1294964.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)-CASE WHEN :entity='all' THEN CAST(internal_revenue AS REAL) ELSE 0 END) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-monthly:2026-09:RD",
+    "question": "2026-09，主体RD：本月经营、资金和行业风险应如何复核？",
+    "app_id": "pharma-monthly",
+    "period": "2026-09",
+    "entity": "RD",
+    "metric": "revenue",
+    "expected": "0.00",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)-CASE WHEN :entity='all' THEN CAST(internal_revenue AS REAL) ELSE 0 END) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  },
+  {
+    "id": "pharma-monthly:2026-09:all",
+    "question": "2026-09，主体all：本月经营、资金和行业风险应如何复核？",
+    "app_id": "pharma-monthly",
+    "period": "2026-09",
+    "entity": "all",
+    "metric": "revenue",
+    "expected": "2264495.28",
+    "oracle_sql": "SELECT SUM(CAST(revenue AS REAL)-CASE WHEN :entity='all' THEN CAST(internal_revenue AS REAL) ELSE 0 END) FROM monthly WHERE period=:period AND (:entity='all' OR entity_id=:entity)"
+  }
+]

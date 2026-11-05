@@ -1,0 +1,18 @@
+[project]
+name = "askdata-pharma-finance-app"
+version = "1.0.0"
+description = "Pharmaceutical finance application for an AskData-compatible platform"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "pydantic>=2.11,<3",
+  "pymysql>=1.1,<2",
+  "requests>=2.32,<3",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

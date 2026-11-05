@@ -1,0 +1,576 @@
+[
+  {
+    "id": "pharma-overview-method",
+    "title": "经营驾驶舱：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-overview"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-overview-method.md",
+    "simulated": false,
+    "sha256": "1ecdc4de57c6382cd3f68cf9932c48f4a0a6fa8b815fb4728ceedf4bd8f310a9"
+  },
+  {
+    "id": "pharma-overview-scenario",
+    "title": "经营驾驶舱：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-overview"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-overview-scenario.md",
+    "simulated": false,
+    "sha256": "f4fb176d9d4f0dee6973ee7f8cd73a140a530127cf8c6f5d97e151049d962c74"
+  },
+  {
+    "id": "pharma-budget-method",
+    "title": "预算差异分析：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-budget"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-budget-method.md",
+    "simulated": false,
+    "sha256": "465c83186a054ebe12483693895d0de217f644762017a56bdb82154846ea1d95"
+  },
+  {
+    "id": "pharma-budget-scenario",
+    "title": "预算差异分析：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-budget"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-budget-scenario.md",
+    "simulated": false,
+    "sha256": "cc7ed366a08af8a5509e6e84df51c29a1e9620cb9912f19684325856bf2710a0"
+  },
+  {
+    "id": "pharma-product-method",
+    "title": "产品盈利分析：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-product"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-product-method.md",
+    "simulated": false,
+    "sha256": "c69fdb3f1c0171f5c51c5408ccb00c949fd918c8cb1386888069618578260df8"
+  },
+  {
+    "id": "pharma-product-scenario",
+    "title": "产品盈利分析：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-product"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-product-scenario.md",
+    "simulated": false,
+    "sha256": "7d0c81bbbb38efc66927a7b7d32f973e3182de299de52440132f9c85b45de315"
+  },
+  {
+    "id": "pharma-tender-method",
+    "title": "集采履约分析：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-tender"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-tender-method.md",
+    "simulated": false,
+    "sha256": "0ad0e5f744254d5ae7ca3aee70c70b93a7c685b7c798d02cc6303237422f0020"
+  },
+  {
+    "id": "pharma-tender-scenario",
+    "title": "集采履约分析：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-tender"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-tender-scenario.md",
+    "simulated": false,
+    "sha256": "1f33f8da8a5f85c714f80a523d9e6ac583f7ed541751221a62580870a3a6abf0"
+  },
+  {
+    "id": "pharma-receivables-method",
+    "title": "医院及渠道应收：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-receivables"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-receivables-method.md",
+    "simulated": false,
+    "sha256": "83bcaa58a935e6a26307ed667325796e787687b8d4a7b084d657c9970be51054"
+  },
+  {
+    "id": "pharma-receivables-scenario",
+    "title": "医院及渠道应收：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-receivables"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-receivables-scenario.md",
+    "simulated": false,
+    "sha256": "2ec30540c7030d178cf2e212172ab1eebf72a65031023f5c649efc5321e9d6c4"
+  },
+  {
+    "id": "pharma-cash-method",
+    "title": "资金预测：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-cash"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-cash-method.md",
+    "simulated": false,
+    "sha256": "ddf767033929e18c4cd29eca4d9b9bc2c2344613067a9c9b6c462f0208718e42"
+  },
+  {
+    "id": "pharma-cash-scenario",
+    "title": "资金预测：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-cash"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-cash-scenario.md",
+    "simulated": false,
+    "sha256": "26bbc4a0b515ac4519be163a65a13c2f12e5dca467041d1906e8b9c128ece084"
+  },
+  {
+    "id": "pharma-inventory-method",
+    "title": "效期库存风险：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-inventory"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-inventory-method.md",
+    "simulated": false,
+    "sha256": "73f1fafe84bc9be1a49685291e380778076ae2e1aefea3fcbf81549f4fc72556"
+  },
+  {
+    "id": "pharma-inventory-scenario",
+    "title": "效期库存风险：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-inventory"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-inventory-scenario.md",
+    "simulated": false,
+    "sha256": "7e31a454953c73edcccc2b5ee7f6c7d53dfd1d2bdc1731ae712a0b779510d8ef"
+  },
+  {
+    "id": "pharma-cost-method",
+    "title": "生产采购成本：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-cost"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-cost-method.md",
+    "simulated": false,
+    "sha256": "d64ba32e7f5d7d7ea32b4dbb02d0365eb53686f57aada8dc10121c2ef99b8602"
+  },
+  {
+    "id": "pharma-cost-scenario",
+    "title": "生产采购成本：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-cost"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-cost-scenario.md",
+    "simulated": false,
+    "sha256": "d4e4184ee4c5572e3a9237f49e736809f320cdcba7179caaa2b6292d2c3470da"
+  },
+  {
+    "id": "pharma-rd-method",
+    "title": "研发项目投入：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-rd"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-rd-method.md",
+    "simulated": false,
+    "sha256": "43a124527917cdbd8032c11b9e453aec0ba81b8ed96320cfa4fd00fcc0e0d0ab"
+  },
+  {
+    "id": "pharma-rd-scenario",
+    "title": "研发项目投入：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-rd"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-rd-scenario.md",
+    "simulated": false,
+    "sha256": "ea570750ad2a6b6a05fcd38b2018793294abccafb1d6c8ea5c29d35e2d1a3052"
+  },
+  {
+    "id": "pharma-expense-method",
+    "title": "销售费用与返利：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-expense"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-expense-method.md",
+    "simulated": false,
+    "sha256": "3c0952acf7d64809862292c0ca0c61ecd342a2cbc497d493d0a4c722ed26a7c2"
+  },
+  {
+    "id": "pharma-expense-scenario",
+    "title": "销售费用与返利：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-expense"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-expense-scenario.md",
+    "simulated": false,
+    "sha256": "37d5277d6675d14143706e1845b750dc3adaa9b3e7ba641854f8f7db1436b473"
+  },
+  {
+    "id": "pharma-quality-method",
+    "title": "财务勾稽检查：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-quality"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-quality-method.md",
+    "simulated": false,
+    "sha256": "ebc98cd6dd5465f742b7ee019f6fb407f1739bf3a965839e8e45df0f5a677889"
+  },
+  {
+    "id": "pharma-quality-scenario",
+    "title": "财务勾稽检查：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-quality"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-quality-scenario.md",
+    "simulated": false,
+    "sha256": "bc4a689b235a24147f5875e312df66a53f9f0539716b8dbabe4f9ce8f601c594"
+  },
+  {
+    "id": "pharma-monthly-method",
+    "title": "月度经营报告：指标与口径",
+    "kind": "method",
+    "app_ids": [
+      "pharma-monthly"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-monthly-method.md",
+    "simulated": false,
+    "sha256": "1b6c1e7c68a979f95bae8e73d12104e38e8c8935c49a9d9b4272853e00c7e378"
+  },
+  {
+    "id": "pharma-monthly-scenario",
+    "title": "月度经营报告：分析操作指引",
+    "kind": "scenario",
+    "app_ids": [
+      "pharma-monthly"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "pharma-monthly-scenario.md",
+    "simulated": false,
+    "sha256": "9af4f63c98ac4483ebb32cfdbb943b1b9b473bd336b99219ffea7fe6af94d15c"
+  },
+  {
+    "id": "demo-credit",
+    "title": "模拟集团信用与催收制度",
+    "kind": "demo_policy",
+    "app_ids": [
+      "pharma-receivables"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "demo-credit.md",
+    "simulated": true,
+    "sha256": "3980deb52b4d32c38ba0ae211da911c125777540fa85ef29d7758f1c3f4b82bf"
+  },
+  {
+    "id": "demo-budget",
+    "title": "模拟集团预算制度",
+    "kind": "demo_policy",
+    "app_ids": [
+      "pharma-budget",
+      "pharma-rd"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "demo-budget.md",
+    "simulated": true,
+    "sha256": "a414d1dedba1c6d743acaf0302a4000343d30ef26ffd704a0683a5e430111172"
+  },
+  {
+    "id": "demo-rebate",
+    "title": "模拟集团返利制度",
+    "kind": "demo_policy",
+    "app_ids": [
+      "pharma-expense"
+    ],
+    "version": "1.0.0",
+    "source_url": null,
+    "published_on": null,
+    "applicable_region": "模拟集团",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": null,
+    "path": "demo-rebate.md",
+    "simulated": true,
+    "sha256": "47bf814c28af267b2b00615c37ede9a9939580d5f1c53911923ab420f15f13f8"
+  },
+  {
+    "id": "public-rd",
+    "title": "财政部：研发支出核算依据摘要",
+    "kind": "public",
+    "app_ids": [
+      "pharma-rd"
+    ],
+    "version": "1.0.0",
+    "source_url": "https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/2006zcfb/200805/t20080519_23149.htm",
+    "published_on": "2008-05-19",
+    "applicable_region": "中国企业会计准则适用企业",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": "2026-10-15",
+    "path": "public-rd.md",
+    "simulated": false,
+    "sha256": "ec89cfbdc7b1eed5ced4ffe250c374f0ca303b031fa04fa333ce0c95dc342f00"
+  },
+  {
+    "id": "public-settlement",
+    "title": "医保局：直接结算地方实践摘要",
+    "kind": "public",
+    "app_ids": [
+      "pharma-cash",
+      "pharma-receivables",
+      "pharma-tender"
+    ],
+    "version": "1.0.0",
+    "source_url": "https://www.nhsa.gov.cn/art/2025/2/10/art_14_15653.html",
+    "published_on": "2025-02-10",
+    "applicable_region": "材料所列地方实践",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": "2026-10-15",
+    "path": "public-settlement.md",
+    "simulated": false,
+    "sha256": "03269c8f72b353721a4782c137f0e42ec43373bfa32cf7587974a51d0fd3a59a"
+  },
+  {
+    "id": "public-inventory",
+    "title": "上海医药：存货效期审计案例摘要",
+    "kind": "public",
+    "app_ids": [
+      "pharma-inventory",
+      "pharma-quality"
+    ],
+    "version": "1.0.0",
+    "source_url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202505/46567a_20250526_PJUP.pdf",
+    "published_on": null,
+    "applicable_region": "上市公司公开案例",
+    "valid_from": null,
+    "valid_to": null,
+    "reviewed_on": "2026-10-15",
+    "retrieved_on": "2026-10-15",
+    "path": "public-inventory.md",
+    "simulated": false,
+    "sha256": "1b8f5eefa7598d976b6d4d52505aabbf8e8e04e820ba0912f07dea8062dc6d43"
+  }
+]
